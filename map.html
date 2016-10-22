@@ -85,16 +85,11 @@ body {
             lng: position.coords.longitude
         };
 
-       UserLat = position.coords.latitude;
-       UserLong = position.coords.longitude;
+        UserLat = position.coords.latitude;
+        UserLong = position.coords.longitude;
 
-        geolocationMap.setView(latLng);
-    }, function () {
-        geolocationErrorOccurred(true, popup, geolocationMap.getCenter());
-    });
-}
-
-                dir = MQ.routing.directions();
+        map.setView(latLng);
+        dir = MQ.routing.directions();
 
                 dir.route({
                     locations: [
@@ -107,6 +102,26 @@ body {
                     directions: dir,
                     fitBounds: true
                 }));
+
+
+    }, function () {
+        geolocationErrorOccurred(true, popup, geolocationMap.getCenter());
+    });
+}
+
+                // dir = MQ.routing.directions();
+
+                // dir.route({
+                //     locations: [
+                //         { street: '60 Luckie St NW', city:'atlanta', state: 'ga' },
+                //         { street: '303 parkway dr ne', city: 'atlanta', state: 'ga' }
+                //     ]
+                // });
+
+                // map.addLayer(MQ.routing.routeLayer({
+                //     directions: dir,
+                //     fitBounds: true
+                // }));
             }
         </script>
 
