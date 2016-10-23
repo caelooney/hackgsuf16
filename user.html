@@ -85,61 +85,40 @@ document.getElementById("date").innerHTML = d.toDateString();
 </div>
 
 <script>
-    $(document).ready(function(){
-      $('.carousel').carousel();
+  $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
+  });
+        
         
       </script>
-  <div class="container blue center-align">
+  <div class="container center-align">
   <div class="row center-align">    
-  <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/1"></a>
-    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/2"></a>
-    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/nature/3"></a>
-    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4"></a>
-    <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
-  </div>
+  <ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header hoverable"><i class="material-icons">perm_identity</i><h5>Doctor & Staff Information</h5></div>
+      <div class="collapsible-body" style="background-color: #3498DB;"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header hoverable"><i class="material-icons">today</i><h5>Today's Upcoming Events</h5></div>
+      <div class="collapsible-body" style="background-color: #3498DB;"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header hoverable"><i class="material-icons">stars</i><h5>Notifcations</h5></div>
+      <div class="collapsible-body" style="background-color: #3498DB;"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+  </ul>
+        
 </div>
 </div>
       
-<div class="container center-align">
-  <div class="row center-align">
-          <div class="row center-align">
-        <div class="col s6 m6">
-          <div class="card medium hoverable">
-            <div class="card-image">
-              <img src="images/hackgsudoc.png">
-              <span class="card-title"></span>
-            </div>
-            
-            <div class="card-action">
-              <h5>Doctor & Staff Information</h5>
-            </div>
-          </div>
-          
-        </div>
-        <div class="col s6 m6">
-          <div class="card medium hoverable">
-            <div class="card-image">
-              <img src="images/sample-1.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p></p>
-            </div>
-            <div class="card-action">
-              <h5>Today's Upcoming Events</h5>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-  </div>
-</div>
+
 
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </body>
 </html>
